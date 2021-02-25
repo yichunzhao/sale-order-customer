@@ -25,7 +25,10 @@ Spring by default create tables inline wiht defined entities. For an embedded da
 
 ````
 spring.jpa.hibernate.ddl-auto=none
+spring.datasource.platform=postgres
 
 ````
+
+Once hibernate.ddl-auto disabled, Spring will automatically pick up schema.sql and/or data.sql; or schema-{platform}.sql and/or data-{platform}.sql; however, this seems only works for the embedded database, but not the real database. 
  
  
