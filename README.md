@@ -1,5 +1,6 @@
 # sale-order-customer
-How to replace @DataJpaTest embedded database
+
+How to replace @DataJpaTest embedded database; how to run integration tests against both an embedded database and a real database. 
 
 @DataJpaTest
 
@@ -20,6 +21,11 @@ AutoConfigureTestDatabase.Replace replace() default AutoConfigureTestDatabase.Re
     }
 ````
 
+Spring by default create tables inline wiht defined entities. For an embedded database, by default spring.jpa.hibernate.ddl-auto=create-drop; for an real database, by default spring.jpa.hibernate.ddl-auto=none. 
 
+````
+spring.jpa.hibernate.ddl-auto=none
 
+````
+ 
  
