@@ -19,6 +19,13 @@ AutoConfigureTestDatabase.Replace replace() default AutoConfigureTestDatabase.Re
         private Replace() {
         }
     }
+    
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+public class CustomerRepositoryDataJpaRemoteDbTest {
+...
+}
+    
 ````
 
 Spring by default create tables inline wiht defined entities. For an embedded database, by default spring.jpa.hibernate.ddl-auto=create-drop; for an real database, by default spring.jpa.hibernate.ddl-auto=none. 
